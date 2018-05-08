@@ -27,4 +27,18 @@ public class AppTest {
 		String actual = Medias.calcular(3.0, 3.0);
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void three99AndThree99GivesReproved() {
+		String expected = "Reprovado";
+		String actual = Medias.calcular(3.99, 3.99);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void three99AndFour01GivesReproved() {
+		String expected = "Em exame";
+		String actual = Medias.calcular(3.999, 4.001);
+		assertEquals(expected, actual);
+	}
 }
